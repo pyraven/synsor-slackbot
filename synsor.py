@@ -43,6 +43,7 @@ if __name__ == "__main__":
                     if event["type"] == "message" and not "subtype" in event:
                         user, channel = event["user"], event["channel"]
                         parse_message(event["text"], channel, user)
+            # Documentation mentions adding a delay or suffer rate limits.
             time.sleep(1)
     else:
         print("Connection Issue.")
